@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Buying Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>Find the Right Computer in 5 Minutes</h1>
+        <p>
+          Answer a short adaptive quiz and get tailored spec targets with plain-English
+          explanations.
+        </p>
+      </header>
+
+      <section id="intro" class="card">
+        <h2>Before you start</h2>
+        <ul>
+          <li>This quiz supports office/work and gaming/content creation (including hybrid use).</li>
+          <li>You will receive Value, Balanced, and Premium price-to-performance tiers.</li>
+          <li>Results are spec targets, not locked model numbers.</li>
+        </ul>
+        <button id="start-btn">Start Quiz</button>
+      </section>
+
+      <section id="quiz" class="card hidden">
+        <div class="progress-wrap">
+          <div class="progress-meta">
+            <span id="progress-label">Question 1</span>
+            <span id="progress-time">~5 min total</span>
+          </div>
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+        </div>
+        <h2 id="question-title"></h2>
+        <p id="question-subtitle" class="muted"></p>
+        <div id="options" class="options"></div>
+        <div class="quiz-actions">
+          <button id="back-btn" class="secondary" disabled>Back</button>
+        </div>
+      </section>
+
+      <section id="results" class="card hidden">
+        <h2>Your Recommendation</h2>
+        <p id="path-summary" class="lead"></p>
+        <div class="result-tabs">
+          <button id="desktop-tab" class="tab-btn active">Desktop Targets</button>
+          <button id="laptop-tab" class="tab-btn">Laptop Equivalents</button>
+        </div>
+        <p id="results-mode-note" class="muted"></p>
+        <div id="monitor-card" class="monitor-card"></div>
+        <div id="result-cards" class="result-grid"></div>
+        <div class="share-wrap">
+          <h3>Share these results</h3>
+          <div class="share-actions">
+            <button id="copy-results-btn">Copy Results</button>
+            <span id="copy-status" class="muted"></span>
+          </div>
+          <textarea
+            id="share-text"
+            class="share-text"
+            readonly
+            aria-label="Shareable recommendation text"
+          ></textarea>
+        </div>
+        <button id="restart-btn" class="secondary">Retake Quiz</button>
+      </section>
+    </main>
+
+    <script src="app.js?v=4"></script>
+  </body>
+</html>
